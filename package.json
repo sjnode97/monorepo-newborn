@@ -2,7 +2,10 @@
   "name": "monorepo-newborn",
   "version": "1.0.0",
   "private": true,
+  "author": "sunjian",
   "scripts": {
+    "dev:main-project": "pnpm -F main-project run dev",
+    "dev:main-nodeapi": "pnpm -F main-nodeapi index.js"
   },
   "license": "ISC"
 }

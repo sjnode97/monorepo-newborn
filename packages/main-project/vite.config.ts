@@ -6,18 +6,6 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 export default defineConfig({
   // ...
-  server: {
-    port: 9091,
-    host: "192.168.31.57",
-    proxy: {//跨域
-      // 如果是 /api 打头，则访问地址如下
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/api/, '')
-      },
-    },
-  },
   resolve: {
     alias: {
       src: "@", // 默认已配置
@@ -28,6 +16,19 @@ export default defineConfig({
       views: "@/views",
       plugins: "@/plugins",
       utils: "@/utils",
+    },
+  },
+  server: {
+    port: 9091,
+    host: "192.168.31.57",
+    proxy: {//跨域
+      // 如果是 /api 打头，则访问地址如下
+      '/api': {
+        ws: true,
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, '')
+      },
     },
   },
   plugins: [

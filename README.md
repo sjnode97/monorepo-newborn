@@ -10,6 +10,8 @@
 `dev:main-nodeapi`					启动后端node服务
 `dev:examples`					    启动组件调试服务
 
+`pnpm link @newborn/components`   进入examples 链接组件平台
+
 ##目录结构
 packages-
 

@@ -1,5 +1,5 @@
-import Button from './src/index'
+import TestButton from './src/testButton'
 // assembly unified export
 export {
-    Button
+    TestButton
 }

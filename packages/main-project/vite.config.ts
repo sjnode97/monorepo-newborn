@@ -5,7 +5,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 export default defineConfig({
-  // ...
   resolve: {
     alias: {
       src: "@", // 默认已配置
@@ -20,8 +19,8 @@ export default defineConfig({
   },
   server: {
     port: 9091,
-    host: "192.168.31.57",
-    proxy: {//跨域
+    // host: "192.168.31.57",
+    proxy: {  //跨域
       // 如果是 /api 打头，则访问地址如下
       '/api': {
         ws: true,

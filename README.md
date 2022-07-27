@@ -8,6 +8,10 @@
 `dev:main-project`					启动前端服务
 
 `dev:main-nodeapi`					启动后端node服务
+`dev:examples`					    启动组件调试服务
+
+##目录结构
+packages-
 
 ## 暂时的模块划分为
 

@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@newborn/components": "^1.0.0",
     "element-plus": "^2.2.10",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-draggable-next": "^2.1.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",

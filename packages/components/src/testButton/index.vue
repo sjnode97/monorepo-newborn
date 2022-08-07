@@ -1,5 +1,8 @@
 <template>
   <div>{{props.text}}</div>
+  <div ref="echarts">
+
+  </div>
 </template>
 
 <script lang="ts" setup>

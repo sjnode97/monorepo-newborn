@@ -45,6 +45,7 @@ importers:
 
   packages/main-project:
     specifiers:
+      '@newborn/components': ^1.0.0
       '@vitejs/plugin-vue': ^3.0.0
       element-plus: ^2.2.10
       typescript: ^4.6.4
@@ -52,10 +53,13 @@ importers:
       unplugin-vue-components: ^0.21.2
       vite: ^3.0.0
       vue: ^3.2.37
+      vue-draggable-next: ^2.1.1
       vue-tsc: ^0.38.4
     dependencies:
+      '@newborn/components': link:../components
       element-plus: registry.npmmirror.com/element-plus/2.2.10_vue@3.2.37
       vue: registry.npmmirror.com/vue/3.2.37
+      vue-draggable-next: registry.npmmirror.com/vue-draggable-next/2.1.1_vue@3.2.37
     devDependencies:
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.0.1_vite@3.0.3+vue@3.2.37
       typescript: registry.npmmirror.com/typescript/4.7.4
@@ -2461,6 +2465,18 @@ packages:
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.37
+    dev: false
+
+  registry.npmmirror.com/vue-draggable-next/2.1.1_vue@3.2.37:
+    resolution: {integrity: sha512-f5lmA7t6LMaL4viR7dU30zzvqJzaKQs0ymL0Jy9UDT9uiZ2tXF3MzPzEvpTH2UODXZJkT+SnjeV1fXHMsgXLYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-draggable-next/-/vue-draggable-next-2.1.1.tgz}
+    id: registry.npmmirror.com/vue-draggable-next/2.1.1
+    name: vue-draggable-next
+    version: 2.1.1
+    peerDependencies:
+      sortablejs: ^1.14.0
+      vue: ^3.2.2
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.37
     dev: false

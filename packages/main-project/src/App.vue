@@ -3,11 +3,14 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import Test from './components/Test.vue'
+import Tree1 from './components/tree1.vue'
 </script>
 
 <template>
   <HelloWorld msg="Vite + Vue" />
   <Test />
+  ll
+  <Tree1 />
 </template>
 
 <style scoped>

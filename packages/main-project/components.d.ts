@@ -10,5 +10,7 @@ declare module '@vue/runtime-core' {
     ElButton: typeof import('element-plus/es')['ElButton']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Test: typeof import('./src/components/Test.vue')['default']
+    Tree: typeof import('./src/components/tree.vue')['default']
+    Tree1: typeof import('./src/components/tree1.vue')['default']
   }
 }

@@ -25,8 +25,11 @@ class Store {
     this.mutations[type](this.state,arg);
   }
   dispatch(type: string, arg: any){
-    console.log(this.actions[type])
-    return this.actions[type](this,arg)
+    return new Promise<void>((res,rej) => {
+      res()
+    }).then(res => {
+      this.actions[type](this,arg)
+    })
   }
 }
 let state:object =  {
@@ -38,13 +41,22 @@ let mutations:object = {
     state.a = data
   },
 }
-let actions = {}
+let actions = {
+  kk({commit}, data) {
+    commit("aCommit",data)
+  }
+}
 
 let myStore = new Store({state, mutations, actions})
-
+console.log(myStore)
 let myClick = () => {
-  myStore.commit('aCommit', '我变了')
+  myStore.dispatch('kk', '我变了1').then(res => {
+    console.log(res)
+  })
   console.log(myStore.state);
+  setTimeout(() => {
+    console.log(myStore.state);
+  })
 }
 
 </script>

@@ -2,6 +2,7 @@
 <!--  <HelloWorld msg="Vite + Vue" />
   <Test />
   <Tree1 />-->
+  <HelloWorld />
   <Vuedrag />
   <Vuedrag1 />
 </template>

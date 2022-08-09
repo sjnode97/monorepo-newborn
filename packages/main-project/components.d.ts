@@ -8,9 +8,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElTree: typeof import('element-plus/es')['ElTree']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Test: typeof import('./src/components/Test.vue')['default']
-    Tree: typeof import('./src/components/tree.vue')['default']
     Tree1: typeof import('./src/components/tree1.vue')['default']
+    VuedraggableTest: typeof import('./src/components/vuedraggableTest.vue')['default']
+    VuedraggableTest1: typeof import('./src/components/vuedraggableTest1.vue')['default']
   }
 }

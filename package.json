@@ -5,6 +5,7 @@
   "author": "sunjian",
   "scripts": {
     "dev:main-project": "pnpm -F main-project run dev",
+    "build:main-project": "pnpm -F main-project run build",
     "dev:main-nodeapi": "pnpm -F main-nodeapi run start",
     "dev:examples": "pnpm -F examples run dev"
   },

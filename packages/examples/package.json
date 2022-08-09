@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "newborn/components": "^1.0.0"
+    "@newborn/components": "^1.0.0"
   }
 }

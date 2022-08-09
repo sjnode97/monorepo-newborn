@@ -1,28 +1,21 @@
+<template>
+<!--  <HelloWorld msg="Vite + Vue" />
+  <Test />
+  <Tree1 />-->
+  <Vuedrag />
+  <Vuedrag1 />
+</template>
+
+
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import Test from './components/Test.vue'
 import Tree1 from './components/tree1.vue'
+import Vuedrag from './components/vuedraggableTest.vue'
+import Vuedrag1 from './components/vuedraggableTest1.vue'
 </script>
 
-<template>
-  <HelloWorld msg="Vite + Vue" />
-  <Test />
-  ll
-  <Tree1 />
-</template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>

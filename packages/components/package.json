@@ -1,5 +1,5 @@
 {
-  "name": "newborn/components",
+  "name": "@newborn/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "sunjian",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "echarts": "^5.3.3",
+    "vue-draggable-next": "^2.1.1"
+  }
 }

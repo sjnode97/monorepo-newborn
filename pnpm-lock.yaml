@@ -18,15 +18,17 @@ importers:
 
   packages/components:
     specifiers:
-      '@kitty-ui/utils': ^1.0.2
-      '@newborn/utils': ^1.0.0
+      echarts: ^5.3.3
+      vue-draggable-next: ^2.1.1
     dependencies:
-      '@kitty-ui/utils': registry.npmmirror.com/@kitty-ui/utils/1.0.2
+      echarts: registry.npmmirror.com/echarts/5.3.3
+      vue-draggable-next: registry.npmmirror.com/vue-draggable-next/2.1.1
 
   packages/examples:
     specifiers:
       '@newborn/components': ^1.0.0
-      newborn/components: ^1.0.0
+    dependencies:
+      '@newborn/components': link:../components
 
   packages/main-nodeapi:
     specifiers:
@@ -49,7 +51,6 @@ importers:
       '@newborn/components': ^1.0.0
       '@vitejs/plugin-vue': ^3.0.0
       element-plus: ^2.2.10
-      newborn/components: ^1.0.0
       typescript: ^4.6.4
       unplugin-auto-import: ^0.10.1
       unplugin-vue-components: ^0.21.2
@@ -57,12 +58,13 @@ importers:
       vue: ^3.2.37
       vue-draggable-next: ^2.1.1
       vue-tsc: ^0.38.4
+      vuedraggable: ^2.24.3
     dependencies:
       '@newborn/components': link:../components
       element-plus: registry.npmmirror.com/element-plus/2.2.10_vue@3.2.37
-      newborn/components: link:../components
       vue: registry.npmmirror.com/vue/3.2.37
       vue-draggable-next: registry.npmmirror.com/vue-draggable-next/2.1.1_vue@3.2.37
+      vuedraggable: registry.npmmirror.com/vuedraggable/2.24.3
     devDependencies:
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.0.1_vite@3.0.3+vue@3.2.37
       typescript: registry.npmmirror.com/typescript/4.7.4
@@ -70,6 +72,9 @@ importers:
       unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.21.2_vite@3.0.3+vue@3.2.37
       vite: registry.npmmirror.com/vite/3.0.3
       vue-tsc: registry.npmmirror.com/vue-tsc/0.38.9_typescript@4.7.4
+
+  packages/utils:
+    specifiers: {}
 
 packages:
 
@@ -133,20 +138,6 @@ packages:
     version: 0.5.4
     dependencies:
       '@floating-ui/core': registry.npmmirror.com/@floating-ui/core/0.7.3
-    dev: false
-
-  registry.npmmirror.com/@kitty-ui/components/1.0.3:
-    resolution: {integrity: sha512-IU65nKF97LNCIQulSX7B8z7KuhlaecWxI4dyc+0wPah99ojs71zxOzKYfQahwpzN5Nvbfq8Owc9kJ63W5L+uSw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@kitty-ui/components/-/components-1.0.3.tgz}
-    name: '@kitty-ui/components'
-    version: 1.0.3
-    dev: false
-
-  registry.npmmirror.com/@kitty-ui/utils/1.0.2:
-    resolution: {integrity: sha512-RshbAbC3yUE3mAnQMbegZvstNJ2GS+vmQKB/EL4Izp4+2hrjAyyeUjOwTj97zWJlZdAAy68k6IhjPy5zCKxDkg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@kitty-ui/utils/-/utils-1.0.2.tgz}
-    name: '@kitty-ui/utils'
-    version: 1.0.2
-    dependencies:
-      '@kitty-ui/components': registry.npmmirror.com/@kitty-ui/components/1.0.3
     dev: false
 
   registry.npmmirror.com/@nodelib/fs.scandir/2.1.5:
@@ -904,6 +895,15 @@ packages:
     resolution: {integrity: sha512-3NdhDuEXnfun/z7x9GOElY49LoqVHoGScmOKwmxhsS8N5Y+Z8KyPPDnaSzqWgYt/ji4mqwfTS34Htrk0zPIXVg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/destroy/-/destroy-1.0.4.tgz}
     name: destroy
     version: 1.0.4
+    dev: false
+
+  registry.npmmirror.com/echarts/5.3.3:
+    resolution: {integrity: sha512-BRw2serInRwO5SIwRviZ6Xgm5Lb7irgz+sLiFMmy/HOaf4SQ+7oYqxKzRHAKp4xHQ05AuHw1xvoQWJjDQq/FGw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/echarts/-/echarts-5.3.3.tgz}
+    name: echarts
+    version: 5.3.3
+    dependencies:
+      tslib: registry.npmmirror.com/tslib/2.3.0
+      zrender: registry.npmmirror.com/zrender/5.3.2
     dev: false
 
   registry.npmmirror.com/ee-first/1.1.1:
@@ -2106,6 +2106,12 @@ packages:
     version: 1.1.0
     dev: false
 
+  registry.npmmirror.com/sortablejs/1.10.2:
+    resolution: {integrity: sha512-YkPGufevysvfwn5rfdlGyrGjt7/CRHwvRPogD/lC+TnvcN29jDpCifKP+rBqf+LRldfXSTh+0CGLcSg0VIxq3A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sortablejs/-/sortablejs-1.10.2.tgz}
+    name: sortablejs
+    version: 1.10.2
+    dev: false
+
   registry.npmmirror.com/source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz}
     name: source-map-js
@@ -2201,6 +2207,12 @@ packages:
       css: registry.npmmirror.com/css/1.0.8
       promise: registry.npmmirror.com/promise/2.0.0
       uglify-js: registry.npmmirror.com/uglify-js/2.2.5
+    dev: false
+
+  registry.npmmirror.com/tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.3.0.tgz}
+    name: tslib
+    version: 2.3.0
     dev: false
 
   registry.npmmirror.com/tslib/2.4.0:
@@ -2472,6 +2484,15 @@ packages:
       vue: registry.npmmirror.com/vue/3.2.37
     dev: false
 
+  registry.npmmirror.com/vue-draggable-next/2.1.1:
+    resolution: {integrity: sha512-f5lmA7t6LMaL4viR7dU30zzvqJzaKQs0ymL0Jy9UDT9uiZ2tXF3MzPzEvpTH2UODXZJkT+SnjeV1fXHMsgXLYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-draggable-next/-/vue-draggable-next-2.1.1.tgz}
+    name: vue-draggable-next
+    version: 2.1.1
+    peerDependencies:
+      sortablejs: ^1.14.0
+      vue: ^3.2.2
+    dev: false
+
   registry.npmmirror.com/vue-draggable-next/2.1.1_vue@3.2.37:
     resolution: {integrity: sha512-f5lmA7t6LMaL4viR7dU30zzvqJzaKQs0ymL0Jy9UDT9uiZ2tXF3MzPzEvpTH2UODXZJkT+SnjeV1fXHMsgXLYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-draggable-next/-/vue-draggable-next-2.1.1.tgz}
     id: registry.npmmirror.com/vue-draggable-next/2.1.1
@@ -2519,6 +2540,14 @@ packages:
       '@vue/runtime-dom': registry.npmmirror.com/@vue/runtime-dom/3.2.37
       '@vue/server-renderer': registry.npmmirror.com/@vue/server-renderer/3.2.37_vue@3.2.37
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.37
+
+  registry.npmmirror.com/vuedraggable/2.24.3:
+    resolution: {integrity: sha512-6/HDXi92GzB+Hcs9fC6PAAozK1RLt1ewPTLjK0anTYguXLAeySDmcnqE8IC0xa7shvSzRjQXq3/+dsZ7ETGF3g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vuedraggable/-/vuedraggable-2.24.3.tgz}
+    name: vuedraggable
+    version: 2.24.3
+    dependencies:
+      sortablejs: registry.npmmirror.com/sortablejs/1.10.2
+    dev: false
 
   registry.npmmirror.com/webpack-sources/3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/webpack-sources/-/webpack-sources-3.2.3.tgz}
@@ -2572,4 +2601,12 @@ packages:
       cliui: registry.npmmirror.com/cliui/2.1.0
       decamelize: registry.npmmirror.com/decamelize/1.2.0
       window-size: registry.npmmirror.com/window-size/0.1.0
+    dev: false
+
+  registry.npmmirror.com/zrender/5.3.2:
+    resolution: {integrity: sha512-8IiYdfwHj2rx0UeIGZGGU4WEVSDEdeVCaIg/fomejg1Xu6OifAL1GVzIPHg2D+MyUkbNgPWji90t0a8IDk+39w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zrender/-/zrender-5.3.2.tgz}
+    name: zrender
+    version: 5.3.2
+    dependencies:
+      tslib: registry.npmmirror.com/tslib/2.3.0
     dev: false

@@ -1,8 +1,8 @@
 <template>
   <div>
-    {{myStore.state}}
+<!--    {{myStore.state}}-->
   </div>
-  <button @click="myClick">djsdsd</button>
+  <button @click="myClick">赝品vuex</button>
 </template>
 
 <script setup lang="ts">
@@ -33,16 +33,16 @@ class Store {
   }
 }
 let state:object =  {
-  // a: '111',
+  a: '111',
   b: '123'
 }
 let mutations:object = {
-  aCommit(state: object, data: any):void {
+  aCommit<T>(state: {a:string}, data: any):void {
     state.a = data
   },
 }
 let actions = {
-  kk({commit}, data) {
+  acCommit({commit}: any, data: any) {
     commit("aCommit",data)
   }
 }
@@ -50,13 +50,13 @@ let actions = {
 let myStore = new Store({state, mutations, actions})
 console.log(myStore)
 let myClick = () => {
-  myStore.dispatch('kk', '我变了1').then(res => {
-    console.log(res)
+  myStore.dispatch('acCommit', '我变了1').then(res => {
+    // console.log(res)
   })
   console.log(myStore.state);
-  setTimeout(() => {
+  /*setTimeout(() => {
     console.log(myStore.state);
-  })
+  })*/
 }
 
 </script>

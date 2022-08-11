@@ -1,9 +1,13 @@
 <template>
+  <div>
+    111
+  </div>
   <el-tree :data="consttreeData" :props="defaultProps" @node-click="handleNodeClick"/>
 </template>
 
 <script setup lang="ts">
 import {ref, Ref} from "vue";
+import myTree from "./index";
 
 interface mytree {
   id: number

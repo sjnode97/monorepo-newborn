@@ -9,5 +9,3 @@ export {
     VueDraggableNext,
     Charts,
 }
-export default class myComponents {
-}

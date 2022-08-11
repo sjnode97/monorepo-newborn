@@ -44,21 +44,22 @@ import {ref} from "vue";
 
 
 let log = (evt: any) => {
-  // window.console.log(evt);
+  window.console.log(evt);
 }
 let idGlobal = 8;
-let cloneDog = (e : any) => {
+let cloneDog = ({ id }:any) => {
   return {
     id: idGlobal++,
-    name: `cat ${idGlobal}`,
-    componentsName: e.componentsName
+    name: `cat ${idGlobal}`
   };
 }
 
 
 let list1 = ref([
-  { name: "生成1个echarts1", id: 1, componentsName: 'charts' },
-  { name: "生成1个echarts2", id: 2, componentsName: 'my-Tree' },
+  { name: "生成1个echarts1", id: 1 },
+  { name: "生成1个echarts2", id: 2 },
+  { name: "生成1个echarts3", id: 3 },
+  { name: "生成1个echarts4", id: 4 }
 ])
 /*let list2 = ref( [
   { name: "cat 5", id: 5 },

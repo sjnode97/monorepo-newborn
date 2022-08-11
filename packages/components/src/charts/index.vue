@@ -1,12 +1,11 @@
 <template>
-  <div ref="charts" id="chartDom" :data-a="mathRom" :style="style">
+  <div ref="charts" id="chartDom" :style="style">
   </div>
 </template>
 
 <script setup lang="ts">
-let mathRom = Math.ceil(Math.random()*100)
 import * as echarts from "echarts"
-import {watch, toRefs,ref, onMounted,defineProps} from "vue";
+import {watch, toRefs,ref, onMounted} from "vue";
 import {ECBasicOption} from "echarts/types/dist/shared";
 const charts = ref();
 
@@ -20,7 +19,7 @@ const props = defineProps<{
 const { myOption } = toRefs(props)
 
 onMounted(() => {
-  const myChart = echarts.init( document.getElementById("chartDom") ); //charts.value
+  const myChart = echarts.init( charts.value ); //charts.value
   myChart.setOption(<ECBasicOption>myOption.value);
   window.onresize = function () {
     myChart.resize();

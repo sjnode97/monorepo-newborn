@@ -1,7 +1,9 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 import Index from "../view/index.vue"
 const routes = [
-    {path: "/index" ,component:() => import("../view/index.vue")},
+    {path: "/" , redirect:'/index'},
+    {path:"/:pathMatch(.*)*", redirect:'/'},
+    {path: "/index" ,name: 'index',component:() => import("../view/index.vue")},
 ]
 const router = createRouter({
     routes,

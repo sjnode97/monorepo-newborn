@@ -3,6 +3,7 @@
     组件测试环境
     <TestButton :text="msg" />1111
     <MyTree/>
+    11
     <Charts :myOption="obj" :name="name" />
   </div>
 </template>

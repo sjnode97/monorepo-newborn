@@ -6,6 +6,7 @@
 </template>
 
 <script setup lang="ts">
+// import  {TestButton, MyTree, Charts} from "@newborn/components"
 import HelloWorld from './components/HelloWorld.vue'
 import Test from './components/Test.vue'
 import Tree1 from './components/tree1.vue'

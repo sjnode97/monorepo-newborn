@@ -328,10 +328,13 @@ fetch('https://24h-aqi-list.vercel.app/api').then(data => {
 
 .design {
   width: calc(100vw - 300px);
-  .dragArea{
+  .dragArea {
     width: 100%;
     min-height: calc(100vh - 90px);
     overflow: hidden;
+    .list-group-item {
+      cursor: pointer;
+    }
   }
 }
 

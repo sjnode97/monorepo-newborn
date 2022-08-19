@@ -51,14 +51,34 @@ let cloneDog = (e : any) => {
   return {
     id: idGlobal++,
     name: `cat ${idGlobal}`,
-    componentsName: e.componentsName
+    componentsName: e.componentsName,
+    w: e.w,
+    h: e.h,
+    x: e.x,
+    y: e.y,
   };
 }
 
 
 let list1 = ref([
-  { name: "生成1个echarts1", id: 1, componentsName: 'charts' },
-  { name: "生成1个echarts2", id: 2, componentsName: 'my-Tree' },
+  {
+    name: "生成1个echarts1",
+    id: 1,
+    componentsName: 'charts',
+    w: 400,
+    h: 400,
+    x: 200,
+    y: 200,
+  },
+  {
+    name: "生成1个echarts2",
+    id: 2,
+    componentsName: 'my-Tree' ,
+    w: 200,
+    h: 200,
+    x: 100,
+    y: 100,
+  },
 ])
 /*let list2 = ref( [
   { name: "cat 5", id: 5 },

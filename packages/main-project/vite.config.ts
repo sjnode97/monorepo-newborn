@@ -20,6 +20,7 @@ export default defineConfig({
   server: {
     port: 9091,
     // host: "192.168.31.57",
+    host:'0.0.0.0',
     proxy: {  //跨域
       // 如果是 /api 打头，则访问地址如下
       '/api': {

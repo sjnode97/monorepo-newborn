@@ -4,6 +4,7 @@ const routes = [
     {path: "/" , redirect:'/index'},
     {path:"/:pathMatch(.*)*", redirect:'/'},
     {path: "/index" ,name: 'index',component:() => import("../view/index.vue")},
+    {path: "/test" ,name: 'test',component:() => import("../view/test.vue")},
 ]
 const router = createRouter({
     routes,

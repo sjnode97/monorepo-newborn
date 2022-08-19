@@ -1,3 +1,6 @@
 import Charts from "./index.vue"
-
-export default Charts
+import ChartsOption from "./option.vue"
+export {
+    Charts,
+    ChartsOption
+}

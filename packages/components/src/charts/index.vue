@@ -2,6 +2,11 @@
   <div ref="charts" id="chartDom" :style="style">
   </div>
 </template>
+<script lang="ts">
+export default {
+  name: "charts",
+};
+</script>
 
 <script setup lang="ts">
 import * as echarts from "echarts"

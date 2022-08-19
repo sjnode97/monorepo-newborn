@@ -2,7 +2,7 @@
   <div>
   </div>
   <el-button type="success">Success</el-button>
-<!--  <el-tree :data="consttreeData" :props="defaultProps" @node-click="handleNodeClick"/>-->
+  <el-tree :data="consttreeData" :props="defaultProps" @node-click="handleNodeClick"/>
 </template>
 
 <script setup lang="ts">

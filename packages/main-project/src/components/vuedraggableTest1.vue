@@ -31,12 +31,12 @@
           class="list-group-item"
           v-for="(element,k) in list2"
           :key="element.name"
-          :w="compontentWidth"
-          :h="compontentHeight"
-          :x="(positionX+100)"
-          :y="(positionY+100)"
-
+          :w="element.w"
+          :h="element.h"
+          :x="element.x"
+          :y="element.y"
       >
+        {{element}}
         <component :is="element.componentsName" :my-option="obj" />
       </VueDragResize>
     </VueDraggableNext>
@@ -312,7 +312,7 @@ fetch('https://24h-aqi-list.vercel.app/api').then(data => {
   box-sizing: border-box;
   position: absolute;
   font-size: 1px;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(108, 108, 108, 0);
   box-shadow: 0 0 2px rgba(187, 187, 187, 0);
 }

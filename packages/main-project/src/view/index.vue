@@ -1,8 +1,8 @@
 <template>
   <div class="root">
-<!--    <Vuedrag />
-    <Vuedrag1 />-->
-    <div ref="chartss" style="width: 500px;height:500px"></div>
+    <Vuedrag />
+    <Vuedrag1 />
+<!--    <div ref="chartss" style="width: 500px;height:500px"></div>-->
   </div>
 </template>
 
@@ -113,7 +113,6 @@ onMounted(() => {
 
   mycharts.on("legendselectchanged",(option)=>{
     console.log(option)
-    option.legend
   })
 })
 

@@ -15,6 +15,7 @@ import Tree1 from './components/tree1.vue'
 import Vuedrag from '../components/vuedraggableTest.vue'
 import Vuedrag1 from '../components/vuedraggableTest1.vue'
 import {onMounted, ref} from "vue";
+/*
 let chartss = ref()
 let elements = ref([
   {
@@ -115,6 +116,7 @@ onMounted(() => {
     console.log(option)
   })
 })
+*/
 
 
 </script>
